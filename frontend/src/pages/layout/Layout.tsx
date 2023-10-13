@@ -13,7 +13,7 @@ const shareButtonStyles: ICommandBarStyles & IButtonStyles = {
       width: 86,
       height: 32,
       borderRadius: 4,
-      background: 'radial-gradient(109.81% 107.82% at 100.1% 90.19%, #0F6CBD 33.63%, #2D87C3 70.31%, #8DDDD8 100%)',
+      background: 'radial-gradient(106.04% 106.06% at 100.1% 90.19%,#37a3dc 33.63%,#5a4394 100%)',
     //   position: 'absolute',
     //   right: 20,
       padding: '5px 12px',
@@ -23,7 +23,7 @@ const shareButtonStyles: ICommandBarStyles & IButtonStyles = {
       color: '#FFFFFF',
     },
     rootHovered: {
-      background: 'linear-gradient(135deg, #0F6CBD 0%, #2D87C3 51.04%, #8DDDD8 100%)',
+      background: 'radial-gradient(106.04% 106.06% at 100.1% 90.19%,#37a3dc 33.63%,#5a4394 100%)',
     },
     label: {
       fontWeight: 600,
@@ -84,7 +84,7 @@ const Layout = () => {
                     </Stack>
                     <Stack horizontal tokens={{ childrenGap: 4 }}>
                             {(appStateContext?.state.isCosmosDBAvailable?.status !== CosmosDBStatus.NotConfigured) && 
-                                <HistoryButton onClick={handleHistoryClick} text={appStateContext?.state?.isChatHistoryOpen ? "Hide chat history" : "Show chat history"}/>    
+                                <HistoryButton onClick={handleHistoryClick} text={appStateContext?.state?.isChatHistoryOpen ? "Verbergen" : "Chat geschiedenis"}/>    
                             }
                             <ShareButton onClick={handleShareClick} />
                     </Stack>
